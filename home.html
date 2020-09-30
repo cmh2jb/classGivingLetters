@@ -14,20 +14,18 @@
         <button type = "button" class = "btn btn-primary" onClick="window.location.reload();">Refresh</button>
     </div>
     <div>
-        <embed src = '3.pdf' width= "800px" height = "2100px"/>
-        <!--<script type="text/javascript">
+        <embed id = 'file' src = 'f' width= "800px" height = "2100px"/>
+        <script type="text/javascript">
             window.onload() = function()
             {
                 var rand = Math.floor((Math.random()*4)+1)
-                var initPath = "/app/assets/"
-                var randString = "" + rand
-                fileFinal = initPath.concat(randString, '.pdf') 
+                fileFinal = "" + rand 
                 ff = document.getElementById('file')
                 ff.src =  fileFinal
 
             };
             
-        </script>-->
+        </script>
         <!--<a href="/assets/2.pdf">Check out a a letter!</a>-->
     </div>
 </div>
