@@ -14,25 +14,21 @@
         <button type = "button" class = "btn btn-primary" onClick="window.location.reload();">Refresh</button>
     </div>
     <div>
+        <embed id = 'file' src= "f" width= "800px" height = "2100px"/>
         <script type="text/javascript">
-            function load()
-            {
-                document.getElementById('file').src = fileFinder();
-            }
-            function fileFinder()
+            window.onload() = function()
             {
                 var rand = Math.floor((Math.random()*4)+1)
                 var files = fs.readdir("/classGivingLetters/letters/")
                 var initsrc = "/classGivingLetters/letters/"
                 var fileFinal = initsrc.concat("",rand,"",".pdf")
-                return "/classGivingLetters/assets/" + "" + rand + "" + ".pdf"; 
-            }
+                ff = document.getElementById('file')
+                ff.src =  "/classGivingLetters/assets/" + "" + rand + "" + ".pdf"; 
+
+            };
             
         </script>
-        <body onload="load()">
-            <embed id = 'file' src= "file.pdf" width= "800px" height = "2100px"/>
-        </body>
-        
+    
         <!--<a href="/assets/2.pdf">Check out a a letter!</a>-->
     </div>
 </div>
