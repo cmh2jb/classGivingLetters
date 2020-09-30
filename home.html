@@ -19,9 +19,9 @@
             var files = fs.readdir("/classGivingLetters/letters/")
             var initsrc = "/classGivingLetters/letters/"
             var fileFinal = initsrc.concat("",rand,"",".pdf")
-            document.querySelector("a").src = fileFinal
+            document.getElementById('file').src = "/classGivingLetters/assets/" + rand + ".pdf";
         </script>
-        <embed src= "a" width= "800px" height = "2100px"/>
+        <embed src= "file" width= "800px" height = "2100px"/>
         
         <!--<a href="/assets/2.pdf">Check out a a letter!</a>-->
     </div>
