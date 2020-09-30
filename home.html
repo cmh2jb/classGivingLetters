@@ -14,17 +14,28 @@
         <button type = "button" class = "btn btn-primary" onClick="window.location.reload();">Refresh</button>
     </div>
     <div>
-        <embed id = 'file' src = 'ff' width= "800px" height = "2100px"/>
+        <object id = 'myPdfObject' type = 'application/pdf'>
+            <embed id = 'myPdfEmbed' src = 'ff' width= "800px" height = "2100px" type="application/pdf"></embed>
+        </object>
         <script>
             window.onload() = function()
             {
                 var rand = Math.floor((Math.random()*4)+1);
                 var randString = rand.toString();
                 var fileFinal = randString.concat('.pdf');
-                var ff = document.getElementById('file');
-                var clone = ff.cloneNode(true);
-                clone.setAttribute('src',fileFinal);
-                ff.parentNode.replaceChild(clone,ff);
+ 
+                var pdfViewerObject = document.getElementById("myPdfObject");
+                pdfViewerObject.setAttribute("data", fileFinal);
+                pdfViewerObject.outerHTML = pdfViewerObject.outerHTML.replace(/data="(.+?)"/, 'data="' + fileFinal + '"');
+                
+                var pdfViewerEmbed = document.getElementById("myPdfEmbed");
+                pdfViewerEmbed.setAttribute("src", fileFinal);
+                pdfViewerEmbed.outerHTML = pdfViewerEmbed.outerHTML.replace(/src="(.+?)"/, 'src="' + fileFinal + '"');
+
+                //var ff = document.getElementById('file');
+                //var clone = ff.cloneNode(true);
+                //clone.setAttribute('src',fileFinal);
+                //ff.parentNode.replaceChild(clone,ff);
                 //ff.src =  '2.pdf';
 
             };
