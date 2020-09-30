@@ -13,10 +13,8 @@
     <div>
         <button type = "button" class = "btn btn-primary" onClick="window.location.reload();">Refresh</button>
     </div>
-    <div>
-        <object id = 'myPdfObject' type = 'application/pdf'>
-            <embed id = 'myPdfEmbed' type="application/pdf"></embed>
-        </object>
+    <!--<div>
+        <object id = 'myPdfObject' type = 'application/pdf'></object>
         <script>
             window.onload() = function()
             {
@@ -28,9 +26,9 @@
                 pdfViewerObject.setAttribute("data", fileFinal);
                 pdfViewerObject.outerHTML = pdfViewerObject.outerHTML.replace(/data="(.+?)"/, 'data="' + fileFinal + '"');
                 
-                var pdfViewerEmbed = document.getElementById("myPdfEmbed");
-                pdfViewerEmbed.setAttribute("src", fileFinal);
-                pdfViewerEmbed.outerHTML = pdfViewerEmbed.outerHTML.replace(/src="(.+?)"/, 'src="' + fileFinal + '"');
+                //var pdfViewerEmbed = document.getElementById("myPdfEmbed");
+                //pdfViewerEmbed.setAttribute("src", fileFinal);
+                //pdfViewerEmbed.outerHTML = pdfViewerEmbed.outerHTML.replace(/src="(.+?)"/, 'src="' + fileFinal + '"');
 
                 //var ff = document.getElementById('file');
                 //var clone = ff.cloneNode(true);
@@ -42,5 +40,13 @@
             
         </script>
         <!--<a href="/assets/2.pdf">Check out a a letter!</a>-->
+    </div>-->
+    <div id = 'pdfElement'>
+        <script>
+            var rand = Math.floor((Math.random()*4)+1);
+            var randString = rand.toString();
+            var fileFinal = randString.concat('.pdf');
+            PDFObject.embed(fileFinal,'#pdfElement');
+        </script>
     </div>
 </div>
