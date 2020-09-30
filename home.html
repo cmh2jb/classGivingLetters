@@ -14,14 +14,15 @@
         <button type = "button" class = "btn btn-primary" onClick="window.location.reload();">Refresh</button>
     </div>
     <div>
-        <!--
         <script>
             var rand = Math.floor((Math.random()*4)+1)
             var files = fs.readdir("/classGivingLetters/letters/")
             var initsrc = "/classGivingLetters/letters/"
+            var fileFinal = initsrc.concat("",rand,"",".pdf")
+           
         </script>
-        <embed src= "/classGivingLetters/letters/" width = "800px" height = "2100px"/>
-        -->
-        <a href="/assets/2.pdf">Download a letter!</a>
+        <embed src= fileFinal width = "800px" height = "2100px"/>
+        
+        <!--<a href="/assets/2.pdf">Check out a a letter!</a>-->
     </div>
 </div>
