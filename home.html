@@ -9,37 +9,8 @@
         <h2>
             Hit "refresh" for a new letter!
         </h2>
-    </div>
     <div>
         <button type = "button" class = "btn btn-primary" onClick="window.location.reload();">Refresh</button>
-    </div>
-    <!--<div>
-        <object id = 'myPdfObject' type = 'application/pdf'></object>
-        <script>
-            window.onload() = function()
-            {
-                var rand = Math.floor((Math.random()*4)+1);
-                var randString = rand.toString();
-                var fileFinal = randString.concat('.pdf');
- 
-                var pdfViewerObject = document.getElementById("myPdfObject");
-                pdfViewerObject.setAttribute("data", fileFinal);
-                pdfViewerObject.outerHTML = pdfViewerObject.outerHTML.replace(/data="(.+?)"/, 'data="' + fileFinal + '"');
-                
-                //var pdfViewerEmbed = document.getElementById("myPdfEmbed");
-                //pdfViewerEmbed.setAttribute("src", fileFinal);
-                //pdfViewerEmbed.outerHTML = pdfViewerEmbed.outerHTML.replace(/src="(.+?)"/, 'src="' + fileFinal + '"');
-
-                //var ff = document.getElementById('file');
-                //var clone = ff.cloneNode(true);
-                //clone.setAttribute('src',fileFinal);
-                //ff.parentNode.replaceChild(clone,ff);
-                //ff.src =  '2.pdf';
-
-            };
-            
-        </script>
-        <!--<a href="/assets/2.pdf">Check out a a letter!</a>-->
     </div>
     <div id = 'pdfElement'>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.3/pdfobject.js" integrity="sha512-hSmaFzjzbZ7aJhF3zyq2pwZMy+h3mcytHHM+d2dJWCLwRc8FYAMc1oyckOrtSliQ8j/DW+54PjdRsEkDt6MkTQ==" crossorigin="anonymous"></script>
