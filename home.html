@@ -23,7 +23,11 @@
             var rand = Math.floor((Math.random()*4)+1);
             var randString = rand.toString();
             var fileFinal = randString.concat('.pdf');
-            PDFObject.embed(fileFinal,'#pdfElement',{height : "2100px"}, {width: "800px"});
+            var options = {
+                width: "20rem",
+                height: "20rem"
+            }
+            PDFObject.embed(fileFinal,'#pdfElement',options);
         </script>
     </div>
 </body>
